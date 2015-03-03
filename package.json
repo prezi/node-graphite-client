@@ -1,0 +1,11 @@
+{
+  "name": "node-graphite-client",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "underscore": "1.7.0"
+  },
+  "engines": {
+    "node": "0.10.35"
+  }
+}
