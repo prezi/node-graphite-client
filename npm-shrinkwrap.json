@@ -1,0 +1,11 @@
+{
+  "name": "node-graphite-client",
+  "version": "0.0.1",
+  "dependencies": {
+    "underscore": {
+      "version": "1.7.0",
+      "from": "underscore@1.7.0",
+      "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz"
+    }
+  }
+}
