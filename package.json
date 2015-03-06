@@ -1,7 +1,11 @@
 {
   "name": "node-graphite-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/prezi/node-graphite-client.git"
+  },
   "dependencies": {
     "underscore": "1.7.0"
   },
