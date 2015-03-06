@@ -11,7 +11,7 @@ function GraphiteClient(options) {
         port: 2003,
         debug: false,
         interval: 60000,
-        prefix: "ratelimiter." + os.hostname() + "."
+        prefix: "monitoring." + os.hostname() + "."
     };
 
     function init() {
