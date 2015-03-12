@@ -23,7 +23,8 @@ function GraphiteClient(options) {
             increment: increment,
             collectLastValue: collectLastValue,
             collectMaximum: collectMaximum,
-            options: options
+            options: options,
+            send: send
         }
     }
 
