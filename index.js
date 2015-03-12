@@ -17,7 +17,9 @@ function GraphiteClient(options) {
     function init() {
         options = _.defaults(options || {}, defaults);
 
-        setInterval(send, options.interval);
+        if (options.interval !== 0) {
+            setInterval(send, options.interval);
+        }
 
         return {
             increment: increment,
