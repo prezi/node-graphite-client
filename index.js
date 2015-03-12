@@ -93,7 +93,7 @@ function GraphiteClient(options) {
 }
 
 module.exports = {
-    createClient: function(options) {
+    createClient: function (options) {
         return new GraphiteClient(options)
     }
 };
