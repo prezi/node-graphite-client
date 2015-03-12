@@ -69,7 +69,7 @@ function GraphiteClient(options) {
         return text
     }
 
-    function send() {
+    function send(done) {
         if(Object.keys(queue).length === 0) {
             return;
         }
@@ -84,6 +84,9 @@ function GraphiteClient(options) {
         });
 
         queue = {};
+        if (done) {
+            done();
+        }
     }
 
     return init()
