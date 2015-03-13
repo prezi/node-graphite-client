@@ -1,6 +1,6 @@
 {
   "name": "node-graphite-client",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "dependencies": {
     "underscore": {
       "version": "1.7.0",
