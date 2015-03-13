@@ -73,20 +73,19 @@ function GraphiteClient(options) {
     }
 
     function send(done) {
-        if(Object.keys(queue).length === 0) {
-            return;
+        if(Object.keys(queue).length !== 0) {
+            var queueString = getQueueAsPlainText();
+            var socket = net.createConnection(options.port, options.host, function () {
+                socket.write(queueString);
+                socket.end();
+            });
+            socket.on('error', function (e) {
+                console.log("Graphite connection failed: " + e.code);
+            });
+
+            queue = {};
         }
 
-        var queueString = getQueueAsPlainText();
-        var socket = net.createConnection(options.port, options.host, function() {
-            socket.write(queueString);
-            socket.end();
-        });
-        socket.on('error', function (e) {
-            console.log("Graphite connection failed: " + e.code);
-        });
-
-        queue = {};
         if (typeof(done) == "function") {
             done();
         }
