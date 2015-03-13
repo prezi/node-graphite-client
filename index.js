@@ -87,7 +87,7 @@ function GraphiteClient(options) {
         });
 
         queue = {};
-        if (done) {
+        if (typeof(done) == "function") {
             done();
         }
     }
